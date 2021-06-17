@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=New+Tegomin&display=swap');
+.banner {
+    width: 100%;
+}
+
+a {
+    text-decoration: none !important;
+    color: #fff;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100vh;
+    opacity: 0.5;
+}
+.carousel-caption h3{
+    font-size: 10vh;
+}
+.carousel-caption h3,.carousel-caption p{
+    font-weight: bold;
+    color: #000;
+}
+.navbar-nav li a {
+    color: #fff;
+    margin-right: 15px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.carousel-caption {
+    top: 30%;
+}
+.type-travel img {
+    width: 100%;
+}
+.type-travel .title {
+    margin-top: 15px;
+    font-style: italic;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.type-travel a .component {
+    margin: 5px 15px 20px 15px;
+}
+
+.most-component {
+    position: relative;
+    outline: none;
+    overflow: hidden;
+}
+
+.most-component img {
+    height: 40vh;
+    outline: none;
+}
+
+.most-component .component {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #193149;
+    transform: translateX(-100px);
+    opacity: 0;
+}
+
+.most-component .component p {
+    text-align: justify;
+    padding: 0 10px;
+    color: #fff !important;
+    font-size: 13px;
+}
+
+.most-component .component h3 {
+    text-align: justify;
+    padding: 0 10px;
+    font-size: 25px;
+    color: #fff !important;
+}
+
+.most-component:hover img {
+    transform: scale(1.2);
+    transition-duration: 1.3s;
+}
+
+.most-component:hover .component {
+    transform: translateX(0px);
+    opacity: 1;
+    transition-duration: 1.3s;
+}
+
+/* @keyframes moveleft {
+    0% {
+        transform: translateX(-100px);
+        display: block;
+    }
+    100% {
+        transform: translateX(0x);
+        display: block;
+    }
+} */
+
+#btn-most {
+    position: absolute;
+    right: 10px;
+}
+
+.slide-btn {
+    background: linear-gradient(#f953c6, #b91d73);
+    border-radius: 25px;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+.desc {
+    word-spacing: 3px;
+    font-size: 24px;
+    font-style: italic;
+    color: #929191;
+    line-height: 1.336;
+    margin-bottom: 0;
+    margin-bottom: 50px;
+    font-family: 'Lobster', cursive;
+}
+.hot-travel {
+    position: relative;
+    outline: none;
+    overflow: hidden;
+}
+.hot-travel .img img {
+    height: 40vh;
+    outline: none;
+}
+.hot-travel .img .desti{
+    position: absolute;
+    top: 20%;
+    bottom: 45%;
+    background: linear-gradient(180deg, black, transparent);
+    right: 15%;
+    left: 15%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 28px;
+    color: snow;
+    font-style: italic;
+    font-family: cursive;
+}
+.hot-travel .component {
+    position: absolute;
+    padding-top: 20px;
+    bottom: 0;
+    width: 100%;
+    height: 65%;
+    background-color: #193149;
+    transform: translateY(150px);
+    opacity:0;
+}
+.hot-travel .component p {
+    text-align: justify;
+    padding: 0 10px;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20px;
+    color:#d1bebe;
+}
+.hot-travel .component h3 {
+    font-weight: bold;
+    text-align: justify;
+    padding: 0 10px;
+    font-size: 14px;
+    color: #fff !important;
+}
+.hot-travel:hover .img img {
+    transform: scale(1.2);
+    transition-duration: 1.3s;
+    opacity: 0.6;
+}
+.hot-travel:hover .img .desti{
+    transform: translateY(-50px);
+    transition-duration: 1s;
+}
+.hot-travel:hover .component {
+    transform: translateY(0px);
+    opacity: 1;
+    transition-duration: 1s;
+}
+.btn-most{
+    margin: 10px;
+}
+.search-tab {
+    width: 100%;
+}
+
+.search-tab .list-tab {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0;
+    background-color: #000;
+    border-top-left-radius: 90px;
+    border-bottom-right-radius: 90px;
+}
+
+.search-tab .list-tab a {
+    color: #fff;
+    width: 100%;
+    font-style: italic;
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.search-form {
+    background: linear-gradient(135deg, #fd7e14, #6f42c1);
+    display: flex;
+    justify-content:center;
+    padding: 30px 30px;
+    flex:1;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 50px;
+    border-radius: 25px;
+    height: 500px;
+}
+
+.search-form .address,.search-form .checkin,.search-form .checkout, .search-form .price{
+    width: 100%;
+    padding: 0 30px;
+}
+.search-form .address label, .search-form .checkin label, .search-form .checkout label, .search-form .price label, .search-form .search-box label {
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+}
+.search-form .address input, .search-form .checkin input, .search-form .checkout input, .search-form .price input, .search-form .search-box button{
+    padding: 10px 10px;
+    outline: none;
+    width: 100%;
+}
+.search-form .search-box button{
+    background: #31124b;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    outline: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding:10px 50px;
+    margin-top: 30px;
+    animation: btnsearch 3s infinite;
+}
+.search-form .search-box button:hover{
+    background: #9783a9;
+}
+@keyframes btnsearch{
+    0%{
+        transform: translateX(-30px);
+    }
+    50%{
+        transform: translateX(30px);
+    }
+    100%{
+        transform: translateX(-30px);
+    }
+}
+.best-tour h2{
+    position: relative;
+}
+.best-tour h2::before{
+    content: "";
+    position: absolute;
+    width: 100px;
+    top: 20px;
+    transform: translateX(-110px);
+    height: 3px;
+    background: #000;
+}
+.best-tour h2::after{
+    content: "";
+    position: absolute;
+    width: 100px;
+    top: 20px;
+    transform: translateX(10px);
+    height: 3px;
+    background: #000;
+}
+.travel h2::before{
+    content: "";
+    position: absolute;
+    width: 100px;
+    top: 20px;
+    transform: translateX(-110px);
+    height: 3px;
+    background: #000;
+}
+.travel h2::after{
+    content: "";
+    position: absolute;
+    width: 100px;
+    top: 20px;
+    transform: translateX(10px);
+    height: 3px;
+    background: #000;
+}
+.booking{
+    margin-top: 50px;
+    height: 100vh;
+    background: url('https://colorlib.com/etc/bforms/colorlib-booking-1/img/background.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.type-travel img{
+    border-radius: 35%;
+    height: 25vh;
+    width: 25vh;
+}
+.list-destination{
+    height: 500px;
+    border-radius: 25px;
+    background: #fff;
+    margin: 0 50px;
+}
+.list-cpn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.list-cpn img{
+    width: 20vh;
+    margin: 30px 0;
+}
+.list-cpn .title{
+    text-transform: uppercase;
+    font-size: 20px;
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    width: 30vh;
+    font-weight: bold;
+    margin-left:60px;
+}
+.list-cpn .title::before{
+    content:"";
+    position: absolute;
+    left: -55px;
+    top: 15px;
+    background: #000;
+    height: 3px;
+    width: 50px;
+}

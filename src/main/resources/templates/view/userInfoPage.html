@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <title>User Info</title>
+</head>
+<body>
+<!-- Include _menu.html -->
+<th:block th:include="extra/_menu"></th:block>
+
+
+<h2>User Info Page</h2>
+<h3>Welcome : <span th:utext="${#request.userPrincipal.name}"></span></h3>
+<b>This is protected page!</b>
+<br/><br/>
+Logged user: <span sec:authentication="name"></span> <br/>
+Roles: <span sec:authentication="principal.authorities"></span>
+<!--<div sec:authorize="isAuthenticated()">-->
+<!--    Authenticated as <span sec:authentication="name"></span></div>-->
+<!--<div th:if="${userInfo != null}" th:utext="${userInfo}"></div>-->
+
+</body>
+
+</html>

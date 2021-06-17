@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Admin</title>
+</head>
+<body>
+<th:block th:include="/extra/_menu"></th:block>
+<h2>Admin Page</h2>
+<h3>Welcome :
+    <span th:utext="${#request.userPrincipal.name}"></span>
+</h3>
+<b>This is protected page!</b>
+<br/><br/>
+<!--<div th:if="${userInfo != null}" th:utext="${userInfo}"></div>-->
+<h3>Welcome : <span th:utext="${#request.userPrincipal.name}"></span></h3>
+Logged user: <span sec:authentication="name"></span> <br/>
+Roles: <span sec:authentication="principal.authorities"></span>
+</body>
+
+</html>
