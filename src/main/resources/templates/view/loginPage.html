@@ -9,18 +9,6 @@
 
 <h1>Login</h1>
 
-<!-- /login?error=true -->
-<!--<div th:if="${#request.getParameter('error') == 'true'}"-->
-<!--     style="color:red;margin:10px 0px;">-->
-<!--    Login Failed!!!<br/>-->
-<!--    Reason :-->
-<!--    <span th:if="${#session!= null and #session.getAttribute('SPRING_SECURITY_LAST_EXCEPTION') != null}"-->
-<!--          th:utext="${#session.getAttribute('SPRING_SECURITY_LAST_EXCEPTION').message}">-->
-<!--                Static summary-->
-<!--         </span>-->
-<!--</div>-->
-<!--<p th:if="${param.error}" class="error">Invalid email or password</p>-->
-<!--<p th:if="${param.logout}" class="success">You have been logged out</p>-->
 <h3><p th:text="${message}"></p></h3>
 <h3>Enter user name and password:</h3>
 <form th:action="@{/j_spring_security_login}" method='POST'>
@@ -41,16 +29,10 @@
             <td><input name="submit" type="submit" value="submit"/></td>
         </tr>
     </table>
-<!--    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />-->
 </form>
-
-<br>
-Username/pass:
-<ul>
-    <li>dbuser1/123</li>
-    <li>dbadmin1/123</li>
-</ul>
-
+<a th:href="@{/forget_password}">
+    <button type="submit">Quên mật khẩu</button>
+</a>
 </body>
 
 </html>

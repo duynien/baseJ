@@ -1,5 +1,6 @@
 package com.bezkoder.spring.data.jpa.test.controller;
 
+import com.bezkoder.spring.data.jpa.test.model.dto.ERole;
 import com.bezkoder.spring.data.jpa.test.model.entity.App_Role;
 import com.bezkoder.spring.data.jpa.test.model.entity.App_User;
 import com.bezkoder.spring.data.jpa.test.repository.AppUserRepository;
@@ -93,7 +94,7 @@ public class LoginController {
   @PostMapping("/accout/sign-up")
   String signUp(Model model, @ModelAttribute App_User user) {
     try {
-      App_Role role = new App_Role(2, "ROLE_USER");
+      App_Role role = new App_Role(1, ERole.ROLE_USER, null);
       Set<App_Role> roles = new HashSet<>();
       roles.add(role);
       user.setUSER_ID(-1);
@@ -103,7 +104,21 @@ public class LoginController {
       appUserRepository.saveAndFlush(user);
       return "redirect:/accout/login";
     } catch (Exception e) {
+      System.out.println(e);
       return "redirect:/accout/sign-up?exist=true";
     }
+  }
+  @RequestMapping(
+          value = {"/log-out"},
+          method = RequestMethod.GET)
+  public String logOut(Model model) {
+    return "view/welcomePage";
+  }
+
+  @RequestMapping(
+          value = {"/forget_password"},
+          method = RequestMethod.GET)
+  public String forgetPassword(Model model) {
+    return "view/forgetPassword";
   }
 }
