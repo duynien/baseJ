@@ -17,9 +17,9 @@ public class CustomAuthenticationFailureHandler extends SimpleUrlAuthenticationF
       throws IOException, ServletException {
     // Login failed by max session
     if (exception.getClass().isAssignableFrom(SessionAuthenticationException.class)) {
-      response.sendRedirect(request.getContextPath() + "/login?message=max_session");
+      response.sendRedirect(request.getContextPath() + "/accout/login?message=max_session");
       return;
     }
-    response.sendRedirect(request.getContextPath() + "/login?message=error");
+    response.sendRedirect(request.getContextPath() + "/accout/login?message=error");
   }
 }
